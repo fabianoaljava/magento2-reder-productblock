@@ -1,0 +1,19 @@
+<?php
+// @codingStandardsIgnoreFile
+
+/**
+ * @var $block \Magento\Catalog\Block\Product\View
+ */
+?>
+<?php
+// $_product = $block->getProduct();
+$blockId = 'Reder_ProductBlock';
+?>
+
+<?php
+$html = $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($blockId)->toHtml();
+if($html != ''):
+    ?>
+    <div class="clearfix"></div>
+    <div><?php echo $html ?></div>
+<?php endif; ?>
